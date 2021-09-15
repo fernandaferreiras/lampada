@@ -68,3 +68,5 @@ id("lampada").addEventListener("mouseleave", desligarLampada)
 id("lampada").addEventListener("dblclick", quebrarLampada)
 
 id("piscar").addEventListener("click", piscar)
+
+// resolvido

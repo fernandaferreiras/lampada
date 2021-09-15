@@ -3,10 +3,6 @@ const lampada = document.getElementById("lampada")
 let idLigar
 let idDesligar
 
-// function id(elemento) {
-//     return document.getElementById(elemento)
-// }
-
 const id = (elemento) => document.getElementById(elemento)
 
 const botoesLigaDesliga = (estadoLiga, estadoDesliga, estadoPiscar) => {
@@ -18,10 +14,6 @@ const botoesLigaDesliga = (estadoLiga, estadoDesliga, estadoPiscar) => {
     botaoPiscar.disabled = estadoPiscar
 }
 
-// function lampadaQuebrada() {
-//     return lampada.src.includes("quebrada")
-// }
-
 const lampadaQuebrada = () => lampada.src.includes("quebrada")
 
 const ligarLampada = () => {
@@ -31,7 +23,7 @@ const ligarLampada = () => {
     }
 }
 
-const desligarLampada= () => {
+const desligarLampada = () => {
     if (!lampadaQuebrada()) {
         lampada.src = "img/desligada.jpg"
         botoesLigaDesliga(false, true)
@@ -54,9 +46,13 @@ const piscar = () => {
         idLigar = setInterval(ligarLampada, 500)
         idDesligar = setInterval(desligarLampada, 1000)
         botaoPiscar.textContent = "Parar"
+        botaoPiscar.classList.remove("verde")
+        botaoPiscar.classList.add("vermelho")
     } else {
         pararPiscar()
         botaoPiscar.textContent = "Piscar"
+        botaoPiscar.classList.remove("vermelho")
+        botaoPiscar.classList.add("verde")
     }
 }
 

@@ -51,11 +51,11 @@ button {
     transition: 0.25s;
 }   
 
-button:hover, button:focus {
+/* button:hover, button:focus {
     outline: none;
     background: black;
     color: #e1e1e6;
-}
+} */
 
 img {
     cursor: pointer;
@@ -68,9 +68,11 @@ footer {
     font-style: italic;
 }
 
-button #piscar:hover {
-    background-color: black;
-    color: white;
+button #piscar {
+    /* background-color: white;
+    color: black; */
+    border: 2.5px;
+    border-color: black;
 }
 
 .verde {
